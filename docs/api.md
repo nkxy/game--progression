@@ -25,8 +25,7 @@ Response:
   {
     "id": number,
     "name": string
-  },
-  ...
+  }
 ]
 ```
 
@@ -43,7 +42,6 @@ Response:
     "name": string,
     "code": string
   }
-  ...
 ]
 ```
 
@@ -64,7 +62,6 @@ Response:
     "numberOfHoursPlayed": number,
     "numberOfHoursToComplete": number
   }
-  ...
 ]
 ```
 
@@ -74,7 +71,7 @@ Add a game
 
 Request Body:
 
-```
+```json
 {
   "id": number,
   "dateCreated": string,
@@ -92,7 +89,7 @@ Update a game
 
 Request Body:
 
-```
+```json
 {
   "id": number,
   "dateCreated": string,
@@ -125,7 +122,6 @@ Response:
     "languageId": number,
     "averageNumberOfHoursPerDay": number
   }
-  ...
 ]
 ```
 
@@ -135,7 +131,7 @@ Update the user’s profile
 
 Request Body:
 
-```
+```json
 {
   "id": number,
   "firstName": string,
