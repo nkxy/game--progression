@@ -38,6 +38,7 @@ can help! Do you accept this grand quest?
 
 ### Dashboard
 
+* Route: `/dashboard`
 * Display the total number of days required for Katie to finish all her uncompleted games
 * Show the % complete to finish her entire game catalog
 * Show number of completed games
@@ -45,7 +46,7 @@ can help! Do you accept this grand quest?
 
 ### Games
 
-* Route: `/games`
+* Route: `/games`; `/games/listing`
 * If the user goes to `/`, it should redirect to `/games`
 * Table listing all game entries, showing columns for
   * A checkbox to select or deselect the entry
