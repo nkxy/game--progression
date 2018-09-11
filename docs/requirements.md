@@ -30,7 +30,7 @@ can help! Do you accept this grand quest?
 * Header
   * The title of the application
   * A my-profile button
-  * A menu containing buttons for “Dashboard” and “Catalog”
+  * A menu containing buttons for “Dashboard” and “Games”
     * The menu button should be highlighted if the user is on that page
 * Body contains whatever the current route show display
 * Footer
