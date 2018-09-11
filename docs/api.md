@@ -72,13 +72,43 @@ Response:
 
 Add a game
 
+Request Body:
+
+```
+{
+  "id": number,
+  "dateCreated": string,
+  "name": string,
+  "platformId": number,
+  "priority": number,
+  "numberOfHoursPlayed": number,
+  "numberOfHoursToComplete": number
+}
+```
+
 ### PUT /games/{id}
 
 Update a game
 
+Request Body:
+
+```
+{
+  "id": number,
+  "dateCreated": string,
+  "name": string,
+  "platformId": number,
+  "priority": number,
+  "numberOfHoursPlayed": number,
+  "numberOfHoursToComplete": number
+}
+```
+
 ### DELETE /games/{id}
 
 Delete a game
+
+Response: `{}`
 
 ### GET /profile
 
@@ -102,3 +132,15 @@ Response:
 ### PUT /profile
 
 Update the user’s profile
+
+Request Body:
+
+```
+{
+  "id": number,
+  "firstName": string,
+  "lastName": string,
+  "languageId": number,
+  "averageNumberOfHoursPerDay": number
+}
+```
