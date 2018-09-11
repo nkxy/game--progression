@@ -6,13 +6,13 @@ Katie’s got a big problem... she buys way too many video games she knows she d
 time to play. But, you know how it is... they’re on sale… and you gotta buy things on sale.
 The real travesty is that she’s so busy programming @ Rangle that she never manages to beat
 most games. She has a terrible habit of playing a new game and forgetting about the old
-one all too quickly as well… and sometimes so much time has passed that she’ll have to
+one all too quickly... and sometimes so much time has passed that she’ll have to
 replay games she already started from the beginning just because she forgot everything!
 This is incredibly inefficient, and her backlog of games to play is growing by the month!
 
 Katie needs your help! She’s completely hopeless! She needs a way to catalog her games,
 prioritize the games she wants to play most, and keep track of her completion to get caught
-up. I will warn you, this journey may be a bit scary and unfamiliar - the road is can be
+up. I will warn you, this journey may be a bit scary and unfamiliar - the road can be
 quite termolterous - but the situation is really quite dire and you are the only one who
 can help! Do you accept this grand quest?
 
@@ -33,7 +33,7 @@ can help! Do you accept this grand quest?
   * A my-profile button
   * A menu containing buttons for “Dashboard” and “Games”
     * The menu button should be highlighted if the user is on that page
-* Body contains whatever the current route show display
+* Body contains whatever the current route should display
 * Footer
   * A way to quickly set your language between English/French
 
@@ -53,7 +53,7 @@ can help! Do you accept this grand quest?
   * A checkbox to select or deselect the entry
   * Game name, which is also a link.
     * Clicking the game name will show a modal dialog to modify:
-      * the number of hours played. Required and must a number >= 0
+      * The number of hours played. Required and must a number >= 0
       * The priority to finish the game, from 1 to 10 as selection list. Required.
   * Platform
   * Estimated % Complete

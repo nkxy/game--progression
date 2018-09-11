@@ -1,4 +1,4 @@
-# Video Game Profession API
+# Video Game Progression API
 
 ## Install JSON Server
 
