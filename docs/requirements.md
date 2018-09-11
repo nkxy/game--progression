@@ -21,6 +21,7 @@ can help! Do you accept this grand quest?
 * Use Ngrx for state management
 * Use feature-based, hierarchical folder/modules
 * Use lazy-loading
+* All static content should be translated via ngx-translate
 
 ### Layout
 
