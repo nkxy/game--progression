@@ -3,17 +3,17 @@
 ## The Problem
 
 Katie’s got a big problem... she buys way too many video games she knows she doesn’t have
-time to play. But, you know how it is... they’re on sale… and you gotta buy things on sale.
+time to play. But, you know how it is... they’re on sale... and she *must* buy things on sale!
 The real travesty is that she’s so busy programming @ Rangle that she never manages to beat
 most games. She has a terrible habit of playing a new game and forgetting about the old
-one all too quickly... and sometimes so much time has passed that she’ll have to
-replay games she already started from the beginning just because she forgot everything!
-This is incredibly inefficient, and her backlog of games to play is growing by the month!
+one all too quickly. And sometimes so much time has passed, she’ll have to replay games she
+already started from the beginning just because she forgot everything! This is incredibly
+inefficient, and her backlog of games to play is growing by the month!
 
 Katie needs your help! She’s completely hopeless! She needs a way to catalog her games,
 prioritize the games she wants to play most, and keep track of her completion to get caught
 up. I will warn you, this journey may be a bit scary and unfamiliar - the road can be
-quite termolterous - but the situation is really quite dire and you are the only one who
+quite termolterous - but the situation is really quite dire and you're the only one who
 can help! Do you accept this grand quest?
 
 ## Requirements
@@ -23,7 +23,22 @@ can help! Do you accept this grand quest?
 * Use lazy-loading
 * All static content should be translated via ngx-translate
 
+### Colors
+
+* **Dark Blue:** #1e2e3b
+* **Blue:** #30495f
+* **Light Blue:** #9dafbd
+* **Text on Dark Background:** #d6dbdf
+* **Text on White Background:** #1e2e3b
+* **Placeholder Text Color:** #6c6c6c
+* **Menu Highlight:** #477293
+* **Green:** #76b43f
+* **Red:** #b43f3f
+* **Orange:** #b48c3f
+
 ### Layout
+
+![Layout](images/layout.png "Layout")
 
 * Route: `/`
 * Unknown routes should go to `/`
@@ -36,10 +51,12 @@ can help! Do you accept this grand quest?
 * Body contains whatever the current route should display
 * Footer
   * A way to quickly set your language between English/French
+  * The selected is bold and has an underline to indicate its selection
 
 ### Dashboard
 
 * Route: `/dashboard`
+* If the user goes to `/`, it should redirect to `/dashboard`
 * Display the total number of days required for Katie to finish all her uncompleted games
 * Show the % complete to finish her entire game catalog
 * Show number of completed games
@@ -47,49 +64,80 @@ can help! Do you accept this grand quest?
 
 ### Games
 
+![Games](images/games.png "Games")
+
 * Route: `/games`; `/games/listing`
-* If the user goes to `/`, it should redirect to `/games`
-* Table listing all game entries, showing columns for
-  * A checkbox to select or deselect the entry
-  * Game name, which is also a link.
-    * Clicking the game name will show a modal dialog to modify:
-      * The number of hours played. Required and must a number >= 0
-      * The priority to finish the game, from 1 to 10 as selection list. Required.
-  * Platform
-  * Estimated % Complete
-    * Note: Maximum 100%.
-    * Calculated by hours played / hours to complete
-  * Estimated Completion Date
-    * Format: 09/30/2018
-  * Priority value
-    * Contains up/down arrows to move the entry up or down in priority
-    * Only display this column if the table is sorted by priority. Max priority is 10 and
-      lowest priority is 1.
-* Sort by priority, completion % or date added
-  * default: sorted by priority
-  * Can be a drop-down list or you can sort by pressing table headers - up to you
-* Filters
-  * By Game name
-  * By Platform (PS4, Switch, 3DS, Wii U, PC)
-* Button to delete all selected entries
+* A card listing of all game entries, showing the following details:
+  * When hovering over a card, the background color should change and
+    the cursor should be set to a pointer
+  * Clicking a card will show a modal dialog to edit the game.
+    * Form Fields
+      * The number of hours played
+        * Required and must a number >= 0
+      * The priority to finish the game, from 1 to 10 as selection list
+        * Required
+      * A checkbox on whether they have beaten the game or not
+  * Sort by priority, completion % or date-added
+    * default: sorted by priority
+    * Can be a drop-down list or you can sort by pressing table headers - up to you
+  * Filters
+    * Changing any filter should immediately refresh the results
+    * By Platform
+      * Select List containing all platforms from REST API
+    * By Completion
+      * Select List containing 3 static values: All, Complete, Not Complete
+    * By Game name
+      * Text Field
+      * Debounce should be set to 250ms to prevent lots of API calls
+        being made/cancelled as the user types
+  * Actions
+    * Button to delete all selected games
+    * Displays the number of games that would be deleted
+    * Button is disabled if there are no selected games
+  * Card Details
+    * A check-mark in the top-right corner of the card if the card is selected
+    * The game name
+    * The image of the game
+    * A color indicator about completion somewhere on the card
+      * Green for marked as completed.
+        * Material Icon: `check_circle`
+      * Orange when game progression is between 0 and 100%. Show a play icon.
+        * Material Icon: `play_circle_filled`
+      * Red when game has 0% completion
+        * Material Icon: `access_time`
+    * Platform Name
+    * Estimated % Complete
+      * Note: Estimates cannot exceed 100%.
+      * Calculated by hours played / hours to complete
+      * Rounded off to 1 decimal place
+    * Estimated Completion Date
+      * Format: 09/30/2018
 
 #### Add Game
+
+![Add Game](images/add-game.png "Add Game")
 
 * Route: `/games/add`
 * Form Fields
   * Name of game.
     * Required.
+  * Image URL
+    * Required
+    * You don't have to upload an image here
+      * I copy image addresses from https://howlongtobeat.com/
   * Choice of Platform: PS4, Switch, 3DS, Wii U, PC
     * Can be a drop-down list or radio buttons
   * How many hours to complete game.
-    * Based on the values @ https://howlongtobeat.com/.
     * Required
     * Must be a positive number
+    * I grab the values from https://howlongtobeat.com/.
   * Priority between 1 and 10
     * Required
   * Also track when the game was added before submitting a POST request
 
 ### Your Profile
+
+![Your Profile](images/your-profile.png "Your Profile")
 
 * Route `/your-profile`; `/your-profile/details`
 * See Profile Details
@@ -99,6 +147,8 @@ can help! Do you accept this grand quest?
 * Edit button to edit these details
 
 #### Edit Your Profile
+
+![Edit Your Profile](images/edit-your-profile.png "Edit Your Profile")
 
 * Route: `/your-profile/edit`
 * Form Fields

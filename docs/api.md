@@ -45,7 +45,7 @@ Response:
 ]
 ```
 
-### GET /games?platformId={platformId}&name_like={name}&_sort={column}
+### GET /games?platformId={platformId}&name_like={name}&isComplete={isComplete}&_sort={column}
 
 Get an array of games
 
@@ -57,10 +57,12 @@ Response:
     "id": number,
     "dateCreated": string,
     "name": string,
+    "image": string,
     "platformId": number,
     "priority": number,
     "numberOfHoursPlayed": number,
-    "numberOfHoursToComplete": number
+    "numberOfHoursToComplete": number,
+    "isComplete": boolean
   }
 ]
 ```
@@ -76,10 +78,12 @@ Request Body:
   "id": number,
   "dateCreated": string,
   "name": string,
+  "image": string,
   "platformId": number,
   "priority": number,
   "numberOfHoursPlayed": number,
-  "numberOfHoursToComplete": number
+  "numberOfHoursToComplete": number,
+  "isComplete": boolean
 }
 ```
 
@@ -94,10 +98,12 @@ Request Body:
   "id": number,
   "dateCreated": string,
   "name": string,
+  "image": string,
   "platformId": number,
   "priority": number,
   "numberOfHoursPlayed": number,
-  "numberOfHoursToComplete": number
+  "numberOfHoursToComplete": number,
+  "isComplete": boolean
 }
 ```
 
@@ -119,6 +125,7 @@ Response:
     "id": number,
     "firstName": string,
     "lastName": string,
+    "image": string,
     "languageId": number,
     "averageNumberOfHoursPerDay": number
   }
@@ -136,6 +143,7 @@ Request Body:
   "id": number,
   "firstName": string,
   "lastName": string,
+  "image": string,
   "languageId": number,
   "averageNumberOfHoursPerDay": number
 }
