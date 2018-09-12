@@ -91,6 +91,9 @@ can help! Do you accept this grand quest?
         * The priority to finish the game, from 1 to 10 as selection list
           * Required
         * A checkbox on whether they have beaten the game or not
+    * The cards listing should be scrollable so that the filters and footer stay on the page.
+      * The scrollbar on the cards listing should either be invisible or a subtle effect rather
+        than the default browser scrollbar
   * Sort by priority, completion % or date-added
     * default: sorted by priority
     * Can be a drop-down list or you can sort by pressing table headers - up to you
