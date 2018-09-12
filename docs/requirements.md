@@ -18,10 +18,14 @@ can help! Do you accept this grand quest?
 
 ## Requirements
 
-* Use Ngrx for state management
-  * State should only be placed in the module where it is used - so do not implement all state
+* All code should be DRY and refactored
+* Use @angular/ngrx for state management
+  * State should only be placed in the module where it is used - avoid implementing all state
     at the root level
-* Use feature-based, hierarchical folder/modules.
+* Use feature-based, hierarchical folder/modules
+  * Avoid root-level directories that contain every component and service at the root level.
+  * Use componentization to separate concerns and ensure every component does only one
+    concept
 * Use lazy-loading
 * All static content should be translated via ngx-translate
 * The site is designed with a screen size of 1366 x 768 in mind. Stick to this resolution.
