@@ -33,7 +33,9 @@ can help! Do you accept this grand quest?
 * **Placeholder Text Color:** #6c6c6c
 * **Menu Highlight:** #405e78
 * **Green:** #76b43f
+* **Light Green:** #a8ce87
 * **Red:** #b43f3f
+* **Light Red:** #c99898
 * **Orange:** #b48c3f
 
 ### Layout
