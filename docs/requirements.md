@@ -31,7 +31,7 @@ can help! Do you accept this grand quest?
 * **Text on Dark Background:** #d6dbdf
 * **Text on White Background:** #1e2e3b
 * **Placeholder Text Color:** #6c6c6c
-* **Menu Highlight:** #477293
+* **Menu Highlight:** #405e78
 * **Green:** #76b43f
 * **Red:** #b43f3f
 * **Orange:** #b48c3f
@@ -52,15 +52,23 @@ can help! Do you accept this grand quest?
 * Footer
   * A way to quickly set your language between English/French
   * The selected is bold and has an underline to indicate its selection
+* Any corners of panes that appear rounded should be around 0.5rem, regardless of
+  what my designs actually look like :) (*Hint:* Katie is not a designer)
 
 ### Dashboard
+
+![Dashboard](images/dashboard.png "Dashboard")
 
 * Route: `/dashboard`
 * If the user goes to `/`, it should redirect to `/dashboard`
 * Display the total number of days required for Katie to finish all her uncompleted games
-* Show the % complete to finish her entire game catalog
-* Show number of completed games
-* Show number of uncompleted games
+  * Round to 1 decimal place
+* Show a progress bar to illustrate the % complete of incomplete games out of the total number of games
+  * Be sure to account for partial completion from this overall %
+    * % complete of each unfinished game / number of total games
+* Show a progress bar to illustrate the % complete of completed games out of the total number of games
+  * Since completion is always 100%, it's just simple division
+    * number of completed games / number of total games
 
 ### Games
 
@@ -68,15 +76,19 @@ can help! Do you accept this grand quest?
 
 * Route: `/games`; `/games/listing`
 * A card listing of all game entries, showing the following details:
-  * When hovering over a card, the background color should change and
-    the cursor should be set to a pointer
-  * Clicking a card will show a modal dialog to edit the game.
-    * Form Fields
-      * The number of hours played
-        * Required and must a number >= 0
-      * The priority to finish the game, from 1 to 10 as selection list
-        * Required
-      * A checkbox on whether they have beaten the game or not
+  * Interactions
+    * When hovering over a card, the background color should change and
+      the cursor should be set to a pointer
+      * The background color change should be a animated CSS transition of 200ms
+    * Single-clicking a card will select the card
+      * The background of the card change to show that it's been selected
+    * Double-clicking a card will show a modal dialog to edit the game.
+      * Form Fields
+        * The number of hours played
+          * Required and must a number >= 0
+        * The priority to finish the game, from 1 to 10 as selection list
+          * Required
+        * A checkbox on whether they have beaten the game or not
   * Sort by priority, completion % or date-added
     * default: sorted by priority
     * Can be a drop-down list or you can sort by pressing table headers - up to you
@@ -95,16 +107,15 @@ can help! Do you accept this grand quest?
     * Displays the number of games that would be deleted
     * Button is disabled if there are no selected games
   * Card Details
-    * A check-mark in the top-right corner of the card if the card is selected
     * The game name
     * The image of the game
     * A color indicator about completion somewhere on the card
       * Green for marked as completed.
-        * Material Icon: `check_circle`
+        * If you want to add a material Icon too: `check_circle`
       * Orange when game progression is between 0 and 100%. Show a play icon.
-        * Material Icon: `play_circle_filled`
+        * If you want to add a material Icon too: `play_circle_filled`
       * Red when game has 0% completion
-        * Material Icon: `access_time`
+        * If you want to add a material Icon too: `access_time`
     * Platform Name
     * Estimated % Complete
       * Note: Estimates cannot exceed 100%.
