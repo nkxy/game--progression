@@ -22,6 +22,8 @@ can help! Do you accept this grand quest?
 * Use feature-based, hierarchical folder/modules
 * Use lazy-loading
 * All static content should be translated via ngx-translate
+* The site is designed with a screen size of 1366 x 768 in mind. Stick to this resolution.
+* You are not required to implement responsive behaviour.
 
 ### Colors
 
