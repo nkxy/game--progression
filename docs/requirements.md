@@ -29,7 +29,7 @@ can help! Do you accept this grand quest?
 * Use lazy-loading
 * All static content should be translated via ngx-translate
 * The site is designed with a screen size of 1366 x 768 in mind. Stick to this resolution.
-* You are not required to implement responsive behaviour.
+  * You are not required to implement responsive behaviour.
 * All forms should display error messages per each field and disable the save button until the
   form is valid
 
