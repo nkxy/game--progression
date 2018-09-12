@@ -19,7 +19,9 @@ can help! Do you accept this grand quest?
 ## Requirements
 
 * Use Ngrx for state management
-* Use feature-based, hierarchical folder/modules
+  * State should only be placed in the module where it is used - so do not implement all state
+    at the root level
+* Use feature-based, hierarchical folder/modules.
 * Use lazy-loading
 * All static content should be translated via ngx-translate
 * The site is designed with a screen size of 1366 x 768 in mind. Stick to this resolution.
