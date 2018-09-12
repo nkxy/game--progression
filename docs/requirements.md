@@ -56,8 +56,9 @@ can help! Do you accept this grand quest?
 * Footer
   * A way to quickly set your language between English/French
   * The selected is bold and has an underline to indicate its selection
-* Any corners of panes that appear rounded should be around 0.5rem, regardless of
-  what my designs actually look like :) (*Hint:* Katie is not a designer)
+* Any corners of panes that appear rounded should be around 0.25 - 0.5rem
+  (use your best judgement), regardless of what my designs actually look like :)
+  (*Hint:* Katie is not a designer)
 
 ### Dashboard
 
