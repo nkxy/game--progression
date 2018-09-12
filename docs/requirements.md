@@ -114,9 +114,9 @@ can help! Do you accept this grand quest?
     * A color indicator about completion somewhere on the card
       * Green for marked as completed.
         * If you want to add a material Icon too: `check_circle`
-      * Orange when game progression is between 0 and 100%. Show a play icon.
+      * Orange when not completed and game progression is > 0 and <= 100%
         * If you want to add a material Icon too: `play_circle_filled`
-      * Red when game has 0% completion
+      * Red when game is not completed and has 0% completion
         * If you want to add a material Icon too: `access_time`
     * Platform Name
     * Estimated % Complete
