@@ -138,15 +138,19 @@ can help! Do you accept this grand quest?
     * Required
     * You don't have to upload an image here
       * I copy image addresses from https://howlongtobeat.com/
-  * Choice of Platform: PS4, Switch, 3DS, Wii U, PC
-    * Can be a drop-down list or radio buttons
+  * Choice of Platform
+    * Can be a drop-down list or radio buttons - your choice
+    * Platforms retrieved from REST
+    * Placeholder Text: "Choose a platform..."
   * How many hours to complete game.
     * Required
     * Must be a positive number
     * I grab the values from https://howlongtobeat.com/.
   * Priority between 1 and 10
     * Required
-  * Also track when the game was added before submitting a POST request
+    * Placeholder Text: "Choose a priority..."
+  * Also track when the game was added before submitting a POST request. Make sure to save
+    in ISO format with timezone information
 
 ### Your Profile
 
@@ -168,7 +172,9 @@ can help! Do you accept this grand quest?
   * First and Last name.
     * Required
     * Only alphabet characters
-  * Radio buttons to select English or French as the preferred language
+  * Select List or Radio buttons to select English or French as the preferred language
+    * Languages retrieved from REST API
+    * Placeholder Text: "Choose a language..."
   * Average Number of Hours to game per day
     * Required
     * Must be a number >= 0
