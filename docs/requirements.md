@@ -94,22 +94,23 @@ can help! Do you accept this grand quest?
         * The priority to finish the game, from 1 to 10 as selection list
           * Required
         * A checkbox on whether they have beaten the game or not
-    * The cards listing should be scrollable so that the filters and footer stay on the page.
+    * The card listing should be scrollable so that the filters and footer stay on the page.
       * The scrollbar on the cards listing should either be invisible or a subtle effect rather
         than the default browser scrollbar
-  * Sort by priority, completion % or date-added
-    * default: sorted by priority
-    * Can be a drop-down list or you can sort by pressing table headers - up to you
-  * Filters
-    * Changing any filter should immediately refresh the results
-    * By Platform
+  * Filters & Sorts
+    * Changing any filter/sort value should immediately refresh the results
+    * Filter By Platform
       * Select List containing all platforms from REST API
-    * By Completion
+    * Filter By Completion
       * Select List containing 3 static values: All, Complete, Not Complete
-    * By Game name
+    * Sort
+      * Select List containing 3 static values: Priority, Completion % or Date Added
+      * Default: sorted by Priority
+    * Filter By Game name
       * Text Field
       * Debounce should be set to 250ms to prevent lots of API calls
         being made/cancelled as the user types
+      * Placeholder Text: "Enter a game name"
   * Actions
     * Button to delete all selected games
     * Displays the number of games that would be deleted
