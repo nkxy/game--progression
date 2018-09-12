@@ -83,6 +83,8 @@ can help! Do you accept this grand quest?
 
 * Route: `/games`; `/games/listing`
 * A card listing of all game entries, showing the following details:
+  * If there are no games, display the message, "There are no games in the catalog."
+    When implementing this, make use of `[ngSwitch]`.
   * Interactions
     * When hovering over a card, the background color should change and
       the cursor should be set to a pointer
