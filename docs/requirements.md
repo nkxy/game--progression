@@ -30,6 +30,7 @@ can help! Do you accept this grand quest?
 * All static content should be translated via ngx-translate
 * The site is designed with a screen size of 1366 x 768 in mind. Stick to this resolution.
   * You are not required to implement responsive behaviour.
+  * Use SASS to implement styles. Please do not use a tachyons-like library.
 * All forms should display error messages per each field and disable the save button until the
   form is valid
 
