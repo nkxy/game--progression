@@ -54,6 +54,9 @@ can help! Do you accept this grand quest?
 ![Layout](images/layout.png "Layout")
 
 * Route: `/`
+* APIs Required:
+  * `GET /profile`: To retrieve the profile information for the header
+  * `GET /languages`: To retrieve the list of languages for the footer
 * Unknown routes should go to `/`
 * Should have a header, body and footer
 * Header
@@ -74,6 +77,8 @@ can help! Do you accept this grand quest?
 ![Dashboard](images/dashboard.png "Dashboard")
 
 * Route: `/dashboard`
+* APIs Required:
+  * `GET /games`: To retrieve the list of games to perform calculations
 * If the user goes to `/`, it should redirect to `/dashboard`
 * Display the total number of days required for Katie to finish all her uncompleted games
   * Round to 1 decimal place
@@ -89,6 +94,9 @@ can help! Do you accept this grand quest?
 ![Games](images/games.png "Games")
 
 * Route: `/games`; `/games/listing`
+* APIs Required:
+  * `GET /platforms`: To retrieve the list of platforms for the filter
+  * `GET /games`: To retrieve the list of games to display the cards
 * A card listing of all game entries, showing the following details:
   * If there are no games, display the message, "There are no games in the catalog."
     When implementing this, make use of `[ngSwitch]`.
@@ -148,8 +156,10 @@ can help! Do you accept this grand quest?
 #### Add Game
 
 ![Add Game](images/add-game.png "Add Game")
-
 * Route: `/games/add`
+* APIs Required:
+  * `GET /platforms`: To retrieve the list of platforms for the platform field
+  * `POST /games`: To add a new game
 * Form Fields
   * Name of game.
     * Required.
@@ -176,6 +186,9 @@ can help! Do you accept this grand quest?
 ![Your Profile](images/your-profile.png "Your Profile")
 
 * Route `/your-profile`; `/your-profile/details`
+* APIs Required:
+  * `GET /profile`: To retrieve the profile information
+  * `GET /languages`: To retrieve the list of languages to display the correct name
 * See Profile Details
   * First and Last name
   * Language
@@ -187,6 +200,9 @@ can help! Do you accept this grand quest?
 ![Edit Your Profile](images/edit-your-profile.png "Edit Your Profile")
 
 * Route: `/your-profile/edit`
+* APIs Required:
+  * `PUT /profile`: To update the profile information
+  * `GET /languages`: To retrieve the list of languages for the language field
 * Form Fields
   * First and Last name.
     * Required
