@@ -95,8 +95,9 @@ can help! Do you accept this grand quest?
     * When hovering over a card, the background color should change and
       the cursor should be set to a pointer
       * The background color change should be a animated CSS transition of 200ms
-    * Single-clicking a card will select the card
-      * The background of the card change to show that it's been selected
+    * Single-clicking a card will toggle the selection of the card
+      * The background of the card change to show that it's been selected and revert to its
+        original colour when not selected
     * Double-clicking a card will show a modal dialog to edit the game.
       * Form Fields
         * The number of hours played
