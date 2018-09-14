@@ -217,3 +217,11 @@ can help! Do you accept this grand quest?
     * If the user presses cancel and the form is dirty (the name, language or hours has
       been modified), show a modal dialog asking confirmation if they want to leave without
       saving changes
+
+## Bonus Requirements
+
+If you've completed the above requirements before the time period, feel free
+to add the following functionality:
+
+* Pagination to the games listing screen
+* Image uploads using FormData with real-time progress as they are uploading
