@@ -5,10 +5,12 @@ import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './store/root-reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { AppEffects } from './store/app.effects';
+import { AppHeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppHeaderComponent
   ],
   imports: [
     BrowserModule,
