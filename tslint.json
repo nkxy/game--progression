@@ -23,7 +23,7 @@
     "eofline": false,
     "jsdoc-format": false,
     "ordered-imports": [
-      true,
+      false,
       {
         "import-sources-order": "lowercase-first",
         "named-imports-order": "lowercase-first",
