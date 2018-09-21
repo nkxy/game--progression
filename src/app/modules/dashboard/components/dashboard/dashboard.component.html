@@ -1,3 +1,5 @@
-<p>
-  dashboard works!
-</p>
+<h2>Time Remaining</h2> 
+<app-dashboard-remaining-time [games]="appStore.getGames() | async">
+</app-dashboard-remaining-time>
+<h3>Number of Unfinished Games</h3>
+<h3>Number of Finished Games</h3>
