@@ -12,6 +12,7 @@
     "es2017"
   ],
   "rules": {
+    "max-classes-per-file": false,
     "no-console": false,
     "no-namespace": false,
     "object-literal-sort-keys": false,
