@@ -11,7 +11,7 @@ export class AppStore {
     private store: Store<AppState>,
   ) {}
 
-  public getGames(): Observable<Game[]> {
-    return this.store.pipe(select(appState => appState.dashboardState.games));
+  public getAppState(): Observable<AppState> {
+    return this.store.pipe(select(appState => appState));
   }
 }
