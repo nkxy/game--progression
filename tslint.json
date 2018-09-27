@@ -23,6 +23,7 @@
     ],
     "eofline": false,
     "jsdoc-format": false,
+    "member-ordering": false,
     "ordered-imports": [
       false,
       {
