@@ -9,6 +9,10 @@ import { AppHeaderComponent } from './components/header/header.component';
 import { AppEffects } from './store/app.effects';
 import { metaReducers, rootReducer } from './store/root-reducer';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
+import { AppStore } from './store/app.store';
+import { HttpClientModule } from '@angular/common/http';
+import { environment } from '../environments/environment';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [
@@ -19,11 +23,15 @@ import { DashboardModule } from './modules/dashboard/dashboard.module';
   imports: [
     AppRoutingModule,
     BrowserModule,
+    HttpClientModule,
     DashboardModule,
     StoreModule.forRoot(rootReducer, { metaReducers }),
-    EffectsModule.forRoot([AppEffects])
+    EffectsModule.forRoot([AppEffects]),
+    !environment.production
+      ? StoreDevtoolsModule.instrument({})
+      : [],
   ],
-  providers: [],
+  providers: [AppStore],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

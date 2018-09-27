@@ -1,5 +1,9 @@
 <h2>Time Remaining</h2> 
-<app-dashboard-remaining-time [games]="appStore.getGames() | async">
+<app-dashboard-remaining-time [games]="dashboardStore.getGames() | async">
 </app-dashboard-remaining-time>
 <h3>Number of Unfinished Games</h3>
+<app-dashboard-unfinished-games [games]="dashboardStore.getGames() | async">   
+</app-dashboard-unfinished-games>
 <h3>Number of Finished Games</h3>
+<app-dashboard-finished-games [games]="dashboardStore.getGames() | async">
+</app-dashboard-finished-games>
