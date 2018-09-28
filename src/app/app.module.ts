@@ -13,6 +13,7 @@ import { AppStore } from './store/app.store';
 import { HttpClientModule } from '@angular/common/http';
 import { environment } from '../environments/environment';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { ProfileModule } from './modules/profile/profile.module';
 
 @NgModule({
   declarations: [
@@ -21,15 +22,16 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     GamesComponent,
   ],
   imports: [
-    AppRoutingModule,
     BrowserModule,
     HttpClientModule,
     DashboardModule,
+    ProfileModule,
     StoreModule.forRoot(rootReducer, { metaReducers }),
     EffectsModule.forRoot([AppEffects]),
     !environment.production
       ? StoreDevtoolsModule.instrument({})
       : [],
+    AppRoutingModule,
   ],
   providers: [AppStore],
   bootstrap: [AppComponent],
